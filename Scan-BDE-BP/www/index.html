@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>QR scanner</title>
+</head>
+
+<body style="background-color: transparent;">
+
+    <div class="position-fixed bg-white" style="top: 200px; bottom: 0; left: 0; right: 0; overflow: scroll;">
+        <div>
+            <div class="position-relative bg-secondary text-white mb-3" style="height:38px;">
+                <h3 class="mx-2 my-0" style="text-transform: none; line-height: 38px;" id="idi">IDI: uihfuerfpne</h3>
+                <button type="button" onclick="validate()" id="validateButton" class="btn btn-warning position-absolute"
+                    style="top:0; right:0; border-radius:0;">À valider</button>
+            </div>
+
+            <h5 class="m-2">Payeur</h5>
+            <table class="table table-sm mx-auto table-bordered text-capitalize" style="width: 90vw;">
+                <tbody>
+                    <tr>
+                        <th>Nom</th>
+                        <td id="name">-</td>
+
+                        <th>Email</th>
+                        <td class="text-lowercase" id="email">-</td>
+                    </tr>
+                    <tr>
+                        <th>Prénom</th>
+                        <td id="surname">-</td>
+
+                        <th>Auth</th>
+                        <td style="text-transform: none;" id="auth">-</td>
+                    </tr>
+                    <tr>
+                        <th>Classe</th>
+                        <td id="classe">-</td>
+
+                        <th>IDA</th>
+                        <td style="text-transform: none;" id="ida">-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="m-2">Billet</h5>
+            <table class="table table-sm mx-auto table-bordered text-capitalize" style="width: 90vw;">
+                <tbody>
+                    <tr>
+                        <th>Type</th>
+                        <td id="type">-</td>
+                    </tr>
+                    <tr>
+                        <th>Options</th>
+                        <td>
+                            <table class="table table-sm m-auto table-borderless">
+                                <tbody id="options">
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Autres infos</th>
+                        <td>
+                            <table class="table table-sm m-auto table-borderless">
+                                <tbody id="otherInfos">
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="m-2">Paiment <i id="pStatus"></i></h5>
+            <table class="table table-sm mx-auto table-bordered text-capitalize" style="width: 90vw; overflow-wrap: anywhere;">
+                <tbody>
+                    <tr>
+                        <th>Type</th>
+                        <td id="pType">-</td>
+                    </tr>
+                    <tr>
+                        <th>Paiment-id</th>
+                        <td id="pId">-</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td id="status">WAITINGCONFIRMED_HELLOASSOCONFIRMED_CB_MANUALCONFIRMED_OTHER_MANUAL</td>
+                    </tr>
+                    <tr>
+                        <th>Prix</th>
+                        <td id="price">-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div class="text-center" style="font-size: 0;">
+                <button type="button" onclick="deco()" class="btn btn-danger" id="deco"
+                    style="border-top-right-radius: 0; border-bottom-right-radius: 0; right:50%; bottom:0;">Déconnexion</button>
+                <button type="button" onclick="$('#pwdModal').modal('show')" class="btn btn-primary" id="connexion"
+                    style="border-top-right-radius: 0; border-bottom-right-radius: 0; right:50%; bottom:0;">Connexion</button>
+
+                <span class="button-checkbox" style="left:50%; bottom:0; right: 15%;">
+                    <button type="button" class="btn" style="border-top-left-radius: 0; border-bottom-left-radius: 0;"
+                        data-color="primary">Auto-valid</button>
+                    <input type="checkbox" id="autoValid" style="display: none;" />
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pwd + id Modal -->
+    <div class="modal fade" id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="pwdModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog mt-5" style="min-width: 50%;" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black-50" id="pwdModalLabel">Identifiants</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-black-50" id="pwdModalContent">
+                    <input type="password" class="form-control mb-2" id="pwdInput" placeholder="Mot de passe">
+                    <input type="text" class="form-control" id="idInput" placeholder="Id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="pwdModalId" onclick="getAuthKey()"
+                        class="btn btn-success">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,2 +1,9 @@
 bdd.php
 helloasso.php
+
+# ignore de Scan-BDE-BP
+Scan-BDE-BP/node_modules/
+Scan-BDE-BP/build.bat
+Scan-BDE-BP/package-lock.json
+Scan-BDE-BP/platforms/
+Scan-BDE-BP/plugins/
