@@ -1,0 +1,513 @@
+{
+    "id": "000064944173",
+    "date": "01\/28\/2020 12:33:00",
+    "amount": "2.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Manon",
+    "payer_last_name": "louart",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12709886",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000127098860",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064912753",
+    "date": "01\/28\/2020 07:38:00",
+    "amount": "6.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Mathilde",
+    "payer_last_name": "LE GOFF",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12703795",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000127037950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064912073",
+    "date": "01\/28\/2020 07:29:00",
+    "amount": "2.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Nicolas",
+    "payer_last_name": "Vernisse",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12703728",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000127037280",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064887983",
+    "date": "01\/27\/2020 22:09:00",
+    "amount": "4.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Cl\u00e9ment",
+    "payer_last_name": "REIS",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12701322",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000127013220",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064884243",
+    "date": "01\/27\/2020 21:41:00",
+    "amount": "8.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Marie",
+    "payer_last_name": "Chamalot",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12700561",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000127005610",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064883913",
+    "date": "01\/27\/2020 21:38:00",
+    "amount": "4.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Hugues",
+    "payer_last_name": "Martinat",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12700495",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000127004950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064871363",
+    "date": "01\/27\/2020 20:09:00",
+    "amount": "2.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Margot",
+    "payer_last_name": "Feriaud",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12697865",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126978650",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064846053",
+    "date": "01\/27\/2020 16:46:00",
+    "amount": "2.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Valentin",
+    "payer_last_name": "Meunier",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12692481",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126924810",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064845533",
+    "date": "01\/27\/2020 16:43:00",
+    "amount": "4.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "L\u00e9o",
+    "payer_last_name": "Camboulives",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12692395",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126923950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064844203",
+    "date": "01\/27\/2020 16:32:00",
+    "amount": "4.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Jerome ",
+    "payer_last_name": "Boulet",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12692111",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126921110",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064837113",
+    "date": "01\/27\/2020 15:34:00",
+    "amount": "8.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "C\u00e9line",
+    "payer_last_name": "Cl\u00e9ment",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12690685",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126906850",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064807933",
+    "date": "01\/27\/2020 11:18:00",
+    "amount": "4.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Coline",
+    "payer_last_name": "Michaud",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12684462",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126844620",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064764723",
+    "date": "01\/26\/2020 20:56:00",
+    "amount": "30.30",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/sortie-ski-2020-1",
+    "payer_first_name": "Oriane",
+    "payer_last_name": "Rouher",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/sortie-ski-2020-1\/paiement-attestation\/12676102",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126761020",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064733963",
+    "date": "01\/26\/2020 16:45:00",
+    "amount": "0.10",
+    "url": "",
+    "payer_first_name": "Thomas",
+    "payer_last_name": "Descorsiers",
+    "url_receipt": "",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126698950",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+
+{
+    "id": "000064730193",
+    "date": "01\/26\/2020 16:07:00",
+    "amount": "2.00",
+    "url": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1",
+    "payer_first_name": "Yann",
+    "payer_last_name": "Popioleck",
+    "url_receipt": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/evenements\/roses-saint-valentin-2020-1\/paiement-attestation\/12669103",
+    "url_tax_receipt": "",
+    "mean": "CARD",
+    "action_id": "000126691030",
+    "type": "",
+    "id_api_partner": "625",
+    "url_called": "https:\/\/events.bde-bp.fr\/helloasso\/callback_paiement.php"
+}
+
+
+
+

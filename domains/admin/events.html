@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://docs.bde-bp.fr/images/statiques/favicon.ico" />
+    <title>Bootstrap - Prebuilt Layout</title>
+    <!-- Bootstrap -->
+    <link href="https://assets.bde-bp.fr/css/bootstrap.css" rel="stylesheet">
+	 
+	 	<!-- Icons -->
+	  	<script src="https://kit.fontawesome.com/1fdd8d0755.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand text-dark font-weight-bold" href="#">PANEL ADMIN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#droite" aria-controls="droite" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="droite">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Adhérents</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Evenements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Historique</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Paramètres</a>
+          </li>
+		<li class="nav-item">
+              <a class="nav-link" href="#">Aide</a>
+       </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item my-auto">
+            Thomas Descorsiers <span class="badge badge-pill badge-warning">ADMIN</span>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-dark ml-lg-3" href="#">Se déconnecter</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+		
+		<div class="alert alert-warning mb-5 d-md-none">
+			Il est recommandé d'utiliser le Panel Admin sur un écran large (ordinateur ou mode paysage) pour un affichage optimal des tableau et du menu.
+			<hr>
+			<small>Si vous ne voyez pas le bouton pour développer le menu, scrollez vers la droite</small>
+		</div>
+		
+	<div>
+		
+		<div class="row">
+			<div class="col-lg-4 mb-2">
+			  <a href="#" class="btn btn-success btn-block h-100">
+					<div class="row align-items-center h-100">
+                      	<div class="col align-self-center">
+                        	<h4>Adhésion</h4>
+                        	<hr>
+                        	<small>Permet de vérifier la validité d'un numéro d'adhérent</small>
+						</div>
+				  </div>
+				</a>
+			</div>
+			<div class="col-lg-4 mb-2">
+				<form action="get" class="card bg-info text-center p-3">
+					<div class="row align-items-center h-100">
+						<div class="col align-self-center">
+							<h4>Inscription à un évènement</h4>
+							<hr>
+							<small>Permet de vérifier l'inscription d'une personne</small>
+							<hr>
+							<div class="input-group">
+								<select class="form-control border-dark" name="event">
+									<option selected>Evènement</option>
+									<option>PULLS</option>
+									<option>FORUM</option>
+								</select>
+							  	<div class="input-group-append">
+									<button class="btn btn-dark" type="submit" id="button-addon2">GO</button>
+							  	</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<hr class="my-3">
+
+		<div>
+
+			<h2>Liste des évènements</h2>
+
+
+			<div class="alert alert-warning">
+				<strong>Attention:</strong> Sont affichés ici uniquement les articles avec évènements, voir la section articles pour tous les consulter.
+			</div>
+
+			<div class="alert alert-secondary">
+				Il n'y a pas d'évènements à afficher (seul les articles avec formulaires sont considérés comme des évènements).
+			</div>
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Article</th>
+						<th scope="col">Actif</th>
+						<th scope="col">Période</th>
+						<th scope="col">Nb inscrits</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">12</th>
+						<td>Roses</td>
+						<td><i class="fas fa-check"></i></td>
+						<td>17-11-2019 > 18-11-2019</td>
+						<td>82</td>
+						<td class="p-1 text-right">
+							<div class="btn-group">
+								<a class="btn btn-primary">Inscriptions</a>
+								<a class="btn btn-info">Editer l'article lié</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">25</th>
+						<td>Ball</td>
+						<td><i class="fas fa-times"></i></td>
+						<td>17-11-2019 > 18-11-2019</td>
+						<td>128</td>
+						<td class="p-1 text-right">
+							<div class="btn-group">
+								<a class="btn btn-primary">Inscriptions</a>
+								<a class="btn btn-info">Editer l'article lié</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		
+		<hr class="my-3">
+
+		<div>
+
+			<h2>Liste des inscriptions</h2>
+			
+			<div class="alert alert-info">
+				Vous consultez les inscrits pour <strong>12 - Ball</strong> 
+			</div>
+
+			<div class="alert alert-secondary">
+				Il n'y a pas d'inscriptions à afficher.
+			</div>
+			
+			<div class="row mb-3">
+				<div class="col-md-6">
+					<a class="btn btn-primary btn-block">Exporter (liste complète)</a>
+				</div>
+				<div class="col-md-6">
+					<a class="btn btn-secondary btn-block">Retour</a>
+				</div>
+			</div>
+			
+			<form class="row">
+			
+				<div class="form-group col-md-6">
+					<label for="Date_Debut">Nom</label>
+					<input type="text" class="form-control" name="Date_Debut" id="Date_Debut" placeholder="Nom">
+				</div>
+
+				<div class="form-group col-md mt-auto pt-2">
+					<button type="submit" class="btn btn-success btn-block">Rechercher</button>
+				</div>
+			
+        	</form>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Nom</th>
+						<th scope="col">Adhérent</th>
+						<th scope="col">Données</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Descorsiers</th>
+						<td>1234</td>
+						<td class="p-0">
+							<table class="table table-sm m-0">
+								<thead>
+									<tr>
+										<th>Prénom</th>
+										<th>Classe</th>
+										<th>Prénom</th>
+										<th>Classe</th>
+										<th>Prénom</th>
+										<th>Classe</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Thomas</td>
+										<td>MPSI1</td>
+										<td>Thomas</td>
+										<td>MPSI1</td>
+										<td>Thomas</td>
+										<td>MPSI1</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td class="p-1 text-right">
+							<a class="btn btn-danger">Supprimer</a>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Descorsiers</th>
+						<td>1234</td>
+						<td class="p-0">
+							<table class="table table-sm m-0">
+								<thead>
+									<tr>
+										<th>Prénom</th>
+										<th>Classe</th>
+										<th>Prénom</th>
+										<th>Classe</th>
+										<th>Prénom</th>
+										<th>Classe</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Thomas</td>
+										<td>MPSI1</td>
+										<td>Thomas</td>
+										<td>MPSI1</td>
+										<td>Thomas</td>
+										<td>MPSI1</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td class="p-1 text-right">
+							<a class="btn btn-danger">Supprimer</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		
+		<hr class="my-3">
+		  
+        <h2>Pulls</h2>
+		  
+		<form class="row">
+			
+          	<div class="form-group col-md-2 custom-control custom-switch mt-auto text-center ml-3">
+				<input type="checkbox" class="custom-control-input" id="customSwitch1">
+				<label class="custom-control-label" for="customSwitch1">Activer la page de commande</label>
+          	</div>
+			
+          	<div class="form-group col-md-3">
+            	<label for="Date_Debut">Date activation</label>
+            	<input type="date" class="form-control" name="Date_Debut" id="Date_Debut">
+          	</div>
+			
+          	<div class="form-group col-md-3">
+            	<label for="Date_Fin">Date fin</label>
+           		<input type="date" class="form-control" name="Date_Fin" id="Date_Fin">
+          	</div>
+			
+			<div class="form-group col-md mt-auto pt-2">
+				<button type="submit" class="btn btn-success btn-block">Mettre à jour</button>
+			</div>
+			
+			<div class="form-group col-md mt-auto pt-2">
+				<a class="btn btn-info btn-block px-4">Paramétrer</a>
+			</div>
+			
+			
+			
+        </form>
+		
+		
+		
+		
+		
+		<h2 class="text-center mt-4">Adhésion</h2>
+		
+		<form class="row">
+			
+		  	<div class="form-group col-4">
+				<label for="Date_Debut">Nom</label>
+				<input type="text" class="form-control" name="Date_Debut" id="Date_Debut" placeholder="Nom">
+			</div>
+			
+		  	<div class="form-group col-4">
+				<label for="Date_Debut">Identifiant</label>
+				<input type="number" class="form-control" name="Date_Debut" id="Date_Debut" placeholder="Identifiant">
+			</div>
+
+			<div class="form-group col-4 mt-auto pt-2">
+				<button type="submit" class="btn btn-success btn-block">Vérifier</button>
+			</div>
+
+		</form>
+		
+		<hr>
+		
+		<div class="border border-success py-5 px-2 mt-4">
+		  	<div class="container text-center">
+				<h1 class="display-4 font-weight-bold text-success">Adhérent enregistré</h1>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th scope="row">Nom</th>
+							<td>Descorsiers</td>
+						</tr>
+						<tr>
+							<th scope="row">Prénom</th>
+							<td>Thomas</td>
+						</tr>
+						<tr>
+							<th scope="row">Classe</th>
+							<td>MPSI 1</td>
+						</tr>
+						<tr>
+							<th scope="row">Identifiant</th>
+							<td>1234</td>
+						</tr>
+						<tr>
+							<th scope="row">Email</th>
+							<td>toto@sfr.fr</td>
+						</tr>
+					</tbody>
+				</table>
+				
+		  	</div>
+		</div>
+		
+		<div class="border border-danger py-5 px-2 mt-4">
+		  	<div class="container text-center">
+				<h1 class="display-4 font-weight-bold text-danger">Aucun résultat</h1>
+				
+		  	</div>
+		</div>
+		
+		
+		
+		
+		
+		<h2 class="text-center mt-4">Inscriptions</h2>
+		
+		<form class="row">
+			
+		  	<div class="form-group col-lg-4">
+				<label for="Date_Debut">Nom</label>
+				<input type="text" class="form-control" name="Date_Debut" id="Date_Debut" placeholder="Nom">
+			</div>
+			
+		  	<div class="form-group col-lg-4">
+				<label for="Date_Debut">Identifiant</label>
+				<input type="number" class="form-control" name="Date_Debut" id="Date_Debut" placeholder="Identifiant">
+			</div>
+
+			<div class="form-group col-lg-4 mt-auto pt-2">
+				<button type="submit" class="btn btn-success btn-block">Vérifier</button>
+			</div>
+
+		</form>
+		
+		<hr>
+		
+		<div class="alert bg-success">
+			Modification prise en compte: Descorsiers Thomas est <strong>dehors</strong>.
+		</div>
+		
+		<div class="border border-success py-5 px-2 mt-4">
+		  	<div class="container text-center">
+				<h1 class="display-4 font-weight-bold text-success">Inscription enregistrée</h1>
+				
+				<div class="alert bg-success">
+					Adhérent: 1234 - Thomas Descorsiers
+				</div>
+				
+				<hr>
+				
+				<div class="alert bg-info">
+					<div class="row">
+						<div class="col-lg-6">
+							Est à l'interrieur
+						</div>
+						<div class="col-lg-6">
+							<a class="btn btn-sm btn-outline-dark btn-block">Changer</a>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th scope="row">Nom</th>
+							<td>Descorsiers</td>
+						</tr>
+						<tr>
+							<th scope="row">Prénom</th>
+							<td>Thomas</td>
+						</tr>
+						<tr>
+							<th scope="row">Classe</th>
+							<td>MPSI 1</td>
+						</tr>
+						<tr>
+							<th scope="row">Email</th>
+							<td>toto@sfr.fr</td>
+						</tr>
+					</tbody>
+				</table>
+				
+		  	</div>
+		</div>
+		
+		<div class="border border-danger py-5 px-2 mt-4">
+		  	<div class="container text-center">
+				<h1 class="display-4 font-weight-bold text-danger">Aucun résultat</h1>
+				
+		  	</div>
+		</div>
+		
+		  
+		</div>
+		
+		
+		
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

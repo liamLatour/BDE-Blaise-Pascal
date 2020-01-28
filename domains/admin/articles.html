@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://docs.bde-bp.fr/images/statiques/favicon.ico" />
+    <title>Bootstrap - Prebuilt Layout</title>
+    <!-- Bootstrap -->
+    <link href="https://assets.bde-bp.fr/css/bootstrap.css" rel="stylesheet">
+	 
+	 	<!-- Icons -->
+	  	<script src="https://kit.fontawesome.com/1fdd8d0755.js" crossorigin="anonymous"></script>
+	  
+	  <!-- Edition html -->
+	  <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand text-dark font-weight-bold" href="#">PANEL ADMIN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#droite" aria-controls="droite" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="droite">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Adhérents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Evenements</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Historique</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Paramètres</a>
+          </li>
+		<li class="nav-item">
+              <a class="nav-link" href="#">Aide</a>
+       </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item my-auto">
+            Thomas Descorsiers <span class="badge badge-pill badge-warning">ADMIN</span>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-dark ml-lg-3" href="#">Se déconnecter</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+		
+		<div class="alert alert-warning mb-5 d-md-none">
+			Il est recommandé d'utiliser le Panel Admin sur un écran large (ordinateur ou mode paysage) pour un affichage optimal des tableau et du menu.
+			<hr>
+			<small>Si vous ne voyez pas le bouton pour développer le menu, scrollez vers la droite</small>
+		</div>
+		
+	<div>
+		
+		
+		<div>
+		  
+        <h2>Edition</h2>
+		
+		<div class="alert alert-info">
+			Vous éditer <strong>12 - Pulls</strong> 
+		</div>
+			
+		<div class="row mb-3">
+			<div class="col-md-10"></div>
+			<div class="col-md-2">
+				<a class="btn btn-secondary btn-block">Retour</a>
+			</div>
+		</div>
+		
+		<div class="alert alert-danger">
+			Une erreur est survenue
+		</div>
+		
+		<div class="border border-success py-5 px-2 mb-3">
+		  	<div class="container">
+				<h1 class="display-4 font-weight-bold text-success">Vos modifications</h1>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th scope="row">Titre</th>
+							<td>Pulls</td>
+						</tr>
+						<tr>
+							<th scope="row">Soustitre</th>
+							<td>Commande des pulls</td>
+						</tr>
+						<tr>
+							<th scope="row">Description</th>
+							<td>Il est temps de commander vos pulls</td>
+						</tr>
+						<tr>
+							<th scope="row">Status</th>
+							<td>Actif</td>
+						</tr>
+						<tr>
+							<th scope="row">Date activation</th>
+							<td>12-12-2019</td>
+						</tr>
+						<tr>
+							<th scope="row">Date fin</th>
+							<td>12-12-2019</td>
+						</tr>
+						<tr>
+							<th scope="row">Miniature</th>
+							<td>PULLS <a class="btn btn-secondary ml-2">Voir</a></td>
+						</tr>
+						<tr>
+							<th scope="row">Contenu</th>
+							<td><a class="btn btn-secondary">Voir</a></td>
+						</tr>
+						<tr>
+							<th scope="row">Formulaire</th>
+							<td><a class="btn btn-secondary">Voir</a></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div class="btn-group">
+                    <a class="btn btn-success">Confirmer ces modification</a>
+                    <a class="btn btn-danger">Annuler</a>
+                </div>
+				
+		  	</div>
+		</div>
+		
+		<div class="border border-warning py-5 px-2 mb-3">
+		  	<div class="container">
+				<h1 class="display-4 font-weight-bold text-warning">Attention</h1>
+				<p>Vous êtes sur le point de <span class="bg-danger px-2 py-1 m-2 font-weight-bold">supprimer</span> 12 - Pulls</p>
+				
+				<a class="btn btn-warning">Continuer</a>
+				
+		  	</div>
+		</div>
+		  
+		<form>
+		  	<div class="form-row">
+				<div class="form-group col-md-6">
+			  		<label for="Nom">Titre</label>
+			  		<input type="text" class="form-control" name="Nom" id="Nom" placeholder="Nom">
+				</div>
+				<div class="form-group col-md-6">
+			  		<label for="Prenom">Soustitre</label>
+			  		<input type="text" class="form-control" name="Prenom" id="Prenom" placeholder="Prénom">
+				</div>
+		  	</div>
+			<div class="form-group">
+			  	<label for="inputEmail4">Description</label>
+			  	<input type="text" class="form-control" id="inputEmail4" placeholder="Email">
+			</div>
+		  	<div class="form-row">
+				<div class="form-group col-md-4">
+			  		<label for="inputEmail4">Date activation</label>
+			  		<input type="text" class="form-control" id="inputEmail4" placeholder="Email">
+				</div>
+				<div class="form-group col-md-4">
+			  		<label for="inputPassword4">Date fin</label>
+			  		<input type="email" class="form-control" id="inputPassword4" placeholder="Password">
+				</div>
+				<div class="form-group col-md-4">
+			  		<label for="inputPassword4">Miniature</label>
+			  		<select class="form-control" name="event">
+						<option>PULLS</option>
+						<option>FORUM</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword4">Contenu</label>
+				<textarea class="form-control" name="contenu" id="editor"></textarea>
+				<script>CKEDITOR.replace( 'editor' );</script>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword4">Preset</label>
+				<div class="alert alert-secondary">
+					Pensez à consulter cette section car elle peut vous facilitez la tache de création, voir la section Aide pour en savoir plus.
+					<hr>
+					<strong>Attention:</strong> Certains presets contiennent déjà le formulaire (liste ci-dessous), dans ce cas ne remplisser pas les sections Formulaire et Options supplémentaires car elles seront ignorées.<br>
+					Pour editer le formulaire pré-fait, créez d'abord l'article, puis utilisez l'outil d'édition.
+					<hr>
+					FORUM - BALL
+				</div>
+				<select class="form-control" name="event">
+					<option>AUCUN</option>
+					<option>FORUM</option>
+					<option>BALL</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword4">Formulaire</label>
+				<div class="alert alert-secondary">
+					Si vous laisser cette section vide, un article classique sera créé, sinon un évènement y sera lié.
+					<hr>
+					Le formulaire doit être entré en format JSON, voir la section Aide pour en savoir plus.
+				</div>
+				<div class="alert alert-warning">
+					<strong>Attention:</strong> Il y a déjà des inscriptions pour l'évènement lié à cet article, si vous videz cette section, les inscrits seront supprimés.
+				</div>
+				<textarea class="form-control" name="FormInputs"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword4">Options supplémentaires</label>
+				<div class="alert alert-secondary">
+					Voir la section aide pour en savoir plus. Doit être entré en format JSON.
+				</div>
+				<textarea class="form-control" name="FormInputs"></textarea>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<button type="submit" class="btn btn-success btn-block">Mettre à jour</button>
+				</div>
+				<div class="col-md-4">
+					<button type="submit" class="btn btn-warning btn-block">Désactiver</button>
+				</div>
+				<div class="col-md-4">
+					<button type="submit" class="btn btn-outline-danger btn-block">Supprimer</button>
+				</div>
+			</div>
+			<small>L'article sera désactivé de base, seul les roles ayant la permission d'édition d'article pouront le consulter.</small>
+		</form>
+		  
+	</div>
+		
+		
+		
+		
+		<hr class="my-3">
+		
+		<div>
+
+			<h2>Liste des articles</h2>
+
+			<div class="alert alert-secondary">
+				Il n'y a pas d'articles à afficher.
+			</div>
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Titre</th>
+						<th scope="col">Actif</th>
+						<th scope="col">Période</th>
+						<th scope="col">Evènement</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">12</th>
+						<td>Roses</td>
+						<td><i class="fas fa-check"></i></td>
+						<td>17-11-2019 > 18-11-2019</td>
+						<td><i class="fas fa-check"></i></td>
+						<td class="p-1 text-right">
+							<div class="btn-group">
+								<a class="btn btn-primary">Exporter inscrits</a>
+								<a class="btn btn-success">Voir</a>
+								<a class="btn btn-info">Editer</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">25</th>
+						<td>Ball</td>
+						<td><i class="fas fa-times"></i></td>
+						<td>17-11-2019 > 18-11-2019</td>
+						<td><i class="fas fa-times"></i></td>
+						<td class="p-1 text-right">
+							<div class="btn-group">
+								<a class="btn btn-success">Voir</a>
+								<a class="btn btn-info">Editer</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		
+		
+		  
+		
+		
+		
+		
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

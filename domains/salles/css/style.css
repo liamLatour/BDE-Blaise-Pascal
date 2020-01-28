@@ -1,0 +1,33 @@
+.niveau {
+    /* background: linear-gradient(90deg, rgba(228,28,57,1) 0%, rgba(228,28,57,1) 25%, rgba(228,179,28,1) 100%); */
+    background: linear-gradient(90deg, rgba(23,162,184,1) 0%, rgba(23,162,184,1) 25%, rgba(228,28,183,1) 100%);
+}
+
+
+.salle {
+    /* background-color: rgb(210, 210, 210); */
+    padding: 1em;
+    border: 3px solid;
+    border-color: rgb(99, 98, 98);
+    border-radius: 5px;
+}
+
+.jyvais {
+    padding-top: 1.5em;
+}
+
+.header {
+    padding: 16px;
+    padding-bottom: 8px;
+    background: linear-gradient(90deg, rgba(228,28,57,1) 0%, rgba(228,28,57,1) 25%, rgba(228,179,28,1) 100%); 
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.headerbleu {
+    padding: 16px;
+    background: rgb(23,162,184);
+    background: linear-gradient(90deg, rgba(23,162,184,1) 0%, rgba(23,162,184,1) 25%, rgba(228,28,183,1) 100%); 
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

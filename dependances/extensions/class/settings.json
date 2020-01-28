@@ -1,0 +1,337 @@
+{
+    "maintenance": false,
+    "gestion_adherents": {
+        "genIDA_min": 1357,
+        "genIDA_max": 9753,
+        "classes": [
+            "MPSI1",
+            "MPSI2",
+            "PCSI1",
+            "PCSI2",
+            "BCPST1",
+            "ECS1",
+            "ECE1",
+            "HK1",
+            "HK2",
+            "MP",
+            "MPX",
+            "PSI",
+            "PC",
+            "PCX",
+            "BCPST2",
+            "ECE2",
+            "ECS2",
+            "KH"
+        ]
+    },
+    "adhesion": {
+        "date_debut": "02-12-2019",
+        "date_fin": "14-12-2019",
+        "actif": false,
+        "lien_helloasso": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/adhesion-le-retour"
+    },
+    "panel_admin": {
+        "version": "BETA-1.0",
+        "minRole": {
+            "articleList": 2,
+            "createArticle": 3,
+            "editArticle": 3,
+            "removeArticle": 99,
+            "isAdherent": 2,
+            "isRegisteredForEvent": 2,
+            "viewAdherents": 2,
+            "exportAdh": 3,
+            "viewIDA": 3,
+            "editAdherentInfos": 3,
+            "editAdherentStatus": 3,
+            "resetAdherentPass": 3,
+            "editAdherentRole": 99,
+            "updateStatusPaiement": 99,
+            "notifyAdherent": 3,
+            "customNotifAdherent": 3,
+            "deleteAdherent": 99,
+            "clearRegistre": 99,
+            "editSettings": 99,
+            "dev_console": 99,
+            "logs": 3
+        }
+    },
+    "events": {
+        "PNom_RegEx": "\/^([A-Za-z-_ àéèëêïîç]){3,30}$\/",
+        "Email_RegEx": "\/^[a-zA-Z0-9.!#$%&'*+\\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$\/"
+    },
+    "pulls": {
+        "actif": true,
+        "date_debut": "12-11-2019",
+        "date_fin": "24-11-2019 23:59:59"
+    },
+    "pulls_pulls": {
+        "MPSI1": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-37\/widget-bouton",
+            "Surnom": false,
+            "Prix": 37,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-32-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "MPSI2": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-42-50\/widget-bouton",
+            "Surnom": true,
+            "Prix": 42.5,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-37-50-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "PCSI1": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-42-50\/widget-bouton",
+            "Surnom": false,
+            "Prix": 42.5,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-37-50-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "PCSI2": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-42-50\/widget-bouton",
+            "Surnom": false,
+            "Prix": 42.5,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-37-50-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "MPX": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-37\/widget-bouton",
+            "Surnom": false,
+            "Prix": 37,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-32-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "PCX": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-24-50\/widget-bouton",
+            "Surnom": false,
+            "Prix": 24.5,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-19-50-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "MP": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-33-50\/widget-bouton",
+            "Surnom": false,
+            "Prix": 33.5,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-28-50-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "PSI": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-41\/widget-bouton",
+            "Surnom": false,
+            "Prix": 41,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-36-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "BIO1": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-33-50\/widget-bouton",
+            "Surnom": false,
+            "Prix": 33.5,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-28-50-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "ECE1": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-35\/widget-bouton",
+            "Surnom": true,
+            "Prix": 35,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-30-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "ECE2": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-35\/widget-bouton",
+            "Surnom": true,
+            "Prix": 35,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-30-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "ECS1": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-35\/widget-bouton",
+            "Surnom": false,
+            "Prix": 35,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-30-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "ECS2": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-35\/widget-bouton",
+            "Surnom": false,
+            "Prix": 35,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-30-adherents\/widget-bouton",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "HK1": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-20",
+            "Surnom": false,
+            "Prix": 20,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-15",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "HK2": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-41",
+            "Surnom": true,
+            "Prix": 41,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-36",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        "KH": {
+            "Lien": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-24-50",
+            "Surnom": false,
+            "Prix": 24.5,
+            "Lien_adh": "https:\/\/www.helloasso.com\/associations\/bde-de-blaise-pascal\/paiements\/pull-19-50",
+            "Taille": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        }
+    },
+    "gestion_salles": {
+        "jokes": [
+            "salle'amandre",
+            "salle'sifi",
+            "salle'timbanque",
+            "salle'opette",
+            "salle'ami",
+            "aby'salle",
+            "salle'oupio",
+            "salle'igaud",
+            "salle'hasard",
+            "salle'afist",
+            "salle'aquis",
+            "salle'monelle",
+            "salle'on",
+            "salle'aire",
+            "salle'om\u00e9e",
+            "colo'salle",
+            "transver'salle",
+            "dor'salle",
+            "va'salle",
+            "salle'ade",
+            "salle't\u00e9",
+            "in'salle'ubre",
+            "salle'separeille",
+            "salle'vatrice",
+            "salle'to",
+            "salle'\u00e9",
+            "salle'im",
+            "salle'utation",
+            "salle'sa",
+            "salle'ari\u00e9",
+            "margauT",
+            "jeanla'salle",
+            "saf\u00e9du'salle",
+            "salle'am\u00e8che",
+            "mpsi2ptite'salle",
+            "goala'salle",
+            "salle'2bain",
+            "salle'2sport",
+            "blaisepa'salle"
+        ]
+    }
+}

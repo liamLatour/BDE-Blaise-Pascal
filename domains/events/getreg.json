@@ -1,0 +1,32 @@
+{
+    "idi": "ABC-ABC-123456",
+    "payer_infos":
+    {
+        "nom": "payer_nom",
+        "prenom": "payer_prenom",
+        "classe": "payer_classe",
+        "email": "payer_email",
+        "auth": true,
+        "ida": 1234
+    },
+    "order_infos":
+    {
+        "tarif": "order_tarif",
+        "prix": "order_prix",
+        "options": ["order_option1", "order_option2"],
+        "custom_infos":
+        {
+            "bus": "oui",
+            "taille voiture": "petite",
+            "message anonyme": "oui"
+        }
+    },
+    "paiement_infos":
+    {
+        "type": "CB/CHEQUE/ESPECES",
+        "paiement_id": "helloasso_id/empty pour cheque ou especes",
+        "status": "WAITING/CONFIRMED_HELLOASSO/CONFIRMED_CB_MANUAL/CONFIRMED_OTHER_MANUAL",
+        "prix": "paiement_prix"
+    },
+    "validation_status": "JUST/NOT/ALREADY"
+}
