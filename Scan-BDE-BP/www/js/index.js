@@ -2,25 +2,16 @@ var lastScan = false;
 var authkey = 'none';
 // https://github.com/bitpay/cordova-plugin-qrscanner
 
-function displayContents(err, text) {
-    if (err) {
-        return
-    } else if (lastScan === false || Date.now() - lastScan > 500) { // 2 sec
-        getInfos(text);
-        lastScan = Date.now();
-    }
-    QRScanner.scan(displayContents);
-}
-
-function getInfos(ID_billet) {
+function getInfos(ID_billet, valid = 0) {
     console.log(ID_billet);
     console.log(authkey);
+
     $('#idiModal').modal('hide');
     if (authkey != "none") {
         send("https://events.bde-bp.fr/getreg.php", {
             'ID_billet': ID_billet,
             'auth_key': authkey,
-            'valid_on_check': $("#autoValid").val()
+            'valid_on_check': valid
         }, fillInfos);
     } else {
         $('#pwdModal').modal('show');
@@ -64,21 +55,21 @@ function validate() {
             'auth_key': authkey,
             'unvalid': idi
         }, function (msg) {
-            alert(msg);
+            getInfos(idi);
         });
     } else if ($("#validateButton").data("status") == "already") {
         send('https://events.bde-bp.fr/getreg.php', {
             'auth_key': authkey,
             'unvalid': idi
         }, function (msg) {
-            alert(msg);
+            getInfos(idi);
         });
     } else if ($("#validateButton").data("status") == "not") {
         send('https://events.bde-bp.fr/getreg.php', {
             'auth_key': authkey,
             'valid': idi
         }, function (msg) {
-            alert(msg);
+            getInfos(idi);
         });
     } else {
         alert("No QR-Code scanned");
@@ -95,9 +86,30 @@ var app = {
     },
 
     receivedEvent: function (id) {
-        console.log('Received Event: ' + id);
-        QRScanner.show();
-        QRScanner.scan(displayContents);
+        $("#preview").css({
+            "top": "-" + (window.innerHeight / 2) + "px"
+        });
+
+        let scanner = new Instascan.Scanner({
+            video: document.getElementById('preview'),
+            mirror: false
+        });
+        scanner.addListener('scan', function (text) {
+            if (lastScan === false || Date.now() - lastScan > 3000) { // 3 sec
+                picture();
+                getInfos(text, ($("#autoValid")[0].checked) ? 1 : 0);
+                lastScan = Date.now();
+            }
+        });
+        Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 1) {
+                scanner.start(cameras[1]);
+            } else {
+                console.error('No cameras found.');
+            }
+        }).catch(function (e) {
+            console.error(e);
+        });
 
         if (typeof (Storage) !== "undefined") {
 
