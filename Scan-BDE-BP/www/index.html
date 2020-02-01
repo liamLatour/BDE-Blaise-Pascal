@@ -17,7 +17,9 @@
     <div class="position-fixed bg-white" style="top: 200px; bottom: 0; left: 0; right: 0; overflow: scroll;">
         <div>
             <div class="position-relative bg-secondary text-white mb-3" style="height:38px;">
-                <h3 class="mx-2 my-0" style="text-transform: none; line-height: 38px;" id="idi">IDI: uihfuerfpne</h3>
+
+                <h3 class="mx-2 my-0" onclick="$('#idiModal').modal('show');" style="text-transform: none; line-height: 38px; cursor: pointer;" id="idi">ID_billet: XXXXXX-XXXXXX</h3>
+
                 <button type="button" onclick="validate()" id="validateButton" class="btn btn-warning position-absolute"
                     style="top:0; right:0; border-radius:0;">À valider</button>
             </div>
@@ -84,7 +86,8 @@
             </table>
 
             <h5 class="m-2">Paiment <i id="pStatus"></i></h5>
-            <table class="table table-sm mx-auto table-bordered text-capitalize" style="width: 90vw; overflow-wrap: anywhere;">
+            <table class="table table-sm mx-auto table-bordered text-capitalize"
+                style="width: 90vw; overflow-wrap: anywhere;">
                 <tbody>
                     <tr>
                         <th>Type</th>
@@ -139,6 +142,28 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="pwdModalId" onclick="getAuthKey()"
+                        class="btn btn-success">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID_billet Modal -->
+    <div class="modal fade" id="idiModal" tabindex="-1" role="dialog" aria-labelledby="idiModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog mt-5" style="min-width: 50%;" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black-50" id="idiModalLabel">ID_billet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-black-50" id="pwdModalContent">
+                    <input type="text" class="form-control" id="idiInput" placeholder="ID_billet">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="pwdModalId" onclick="getInfos($('#idiInput').val())"
                         class="btn btn-success">Valider</button>
                 </div>
             </div>

@@ -6,21 +6,25 @@ function displayContents(err, text) {
     if (err) {
         return
     } else if (lastScan === false || Date.now() - lastScan > 500) { // 2 sec
-        console.log(text);
-        console.log(authkey);
-        if (authkey != "none") {
-            send("https://events.bde-bp.fr/getreg.php", {
-                'idi': text,
-                'auth_key': authkey,
-                'valid_on_check': $("#autoValid").val()
-            }, fillInfos);
-        } else {
-            $('#pwdModal').modal('show');
-        }
-
+        getInfos(text);
         lastScan = Date.now();
     }
     QRScanner.scan(displayContents);
+}
+
+function getInfos(ID_billet) {
+    console.log(ID_billet);
+    console.log(authkey);
+    $('#idiModal').modal('hide');
+    if (authkey != "none") {
+        send("https://events.bde-bp.fr/getreg.php", {
+            'ID_billet': ID_billet,
+            'auth_key': authkey,
+            'valid_on_check': $("#autoValid").val()
+        }, fillInfos);
+    } else {
+        $('#pwdModal').modal('show');
+    }
 }
 
 function deco() {

@@ -74,6 +74,13 @@ function send(url, data, callback) {
 }
 
 function fillInfos(data) {
+    console.log(data);
+    if (!data.hasOwnProperty("idi")) {
+        alert("Le QR Code scanné n'est pas valide");
+        return;
+    }
+    picture();
+
     $("#idi").html("IDI: " + data["idi"]);
 
     $("#name").html(data["payer_infos"]["nom"]);
@@ -83,12 +90,11 @@ function fillInfos(data) {
     $("#classe").html(data["payer_infos"]["classe"]);
     $("#ida").html(data["payer_infos"]["ida"]);
 
-
     $("#type").html(data["order_infos"]["tarif"]);
     $("#options").html("");
     $("#otherInfos").html("");
 
-    if(data["order_infos"].hasOwnProperty("options")){
+    if (data["order_infos"].hasOwnProperty("options")) {
         for (let [key, value] of Object.entries(data["order_infos"]["options"])) {
             $("#options").append("<tr><td>" + value + "</td></tr>");
         }
@@ -116,7 +122,6 @@ function fillInfos(data) {
         $("#pStatus").html('<img src="img/hourglass-half-solid.svg" alt="Attente" height="20px" width="20px"/>');
     }
 
-
     $("#validateButton").removeClass("btn-success");
     $("#validateButton").removeClass("btn-warning");
     $("#validateButton").removeClass("btn-danger");
@@ -138,5 +143,16 @@ function fillInfos(data) {
         $("#validateButton").html("À valider");
         $("#validateButton").addClass("btn-warning");
         $("#validateButton").data("status", "not");
+    }
+}
+
+function picture() {
+    if (!navigator.vibrate(50)) {
+        $("body").css("backgroundColor", "#3f3d3d")
+        .animate({
+            backgroundColor: "transparent"
+        }, 100, null, function () {
+            $("body").css("backgroundColor", "transparent");
+        });
     }
 }
