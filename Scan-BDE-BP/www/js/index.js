@@ -1,5 +1,9 @@
 var lastScan = false;
 var authkey = 'none';
+var cameras = null;
+var currentCam = 0;
+var scanner = null;
+var lightState = false;
 // https://github.com/bitpay/cordova-plugin-qrscanner
 
 function getInfos(ID_billet, valid = 0) {
@@ -26,6 +30,11 @@ function deco() {
     $("#deco").addClass("d-none");
     $("#connexion").removeClass("d-none");
     $('#pwdModal').modal('show');
+}
+
+function changeCamera() {
+    currentCam = (currentCam + 1) % cameras.length;
+    scanner.start(cameras[currentCam]);
 }
 
 function getAuthKey() {
@@ -87,10 +96,10 @@ var app = {
 
     receivedEvent: function (id) {
         $("#preview").css({
-            "top": "-" + (window.innerHeight / 2) + "px"
+            "top": "-" + (window.innerHeight / 2 - 100) + "px"
         });
 
-        let scanner = new Instascan.Scanner({
+        scanner = new Instascan.Scanner({
             video: document.getElementById('preview'),
             mirror: false
         });
@@ -101,9 +110,12 @@ var app = {
                 lastScan = Date.now();
             }
         });
-        Instascan.Camera.getCameras().then(function (cameras) {
-            if (cameras.length > 1) {
-                scanner.start(cameras[1]);
+        Instascan.Camera.getCameras().then(function (cams) {
+            cameras = cams;
+            currentCam = 0
+            if (cams.length > 1) {
+                currentCam = 1
+                scanner.start(cams[1]);
             } else {
                 console.error('No cameras found.');
             }
@@ -135,6 +147,52 @@ var app = {
             }
         } else {
             $('#pwdModal').modal('show');
+        }
+
+        if ('mediaDevices' in navigator) {
+            //Get the environment camera (usually the second one)
+            navigator.mediaDevices.enumerateDevices().then(devices => {
+                const cameras = devices.filter((device) => device.kind === 'videoinput');
+    
+                if (cameras.length === 0) {
+                    console.log('No camera found on this device.');
+                }
+                const camera = cameras[cameras.length - 1];
+    
+                // Create stream and get video track
+                navigator.mediaDevices.getUserMedia({
+                    video: {
+                        deviceId: camera.deviceId,
+                        facingMode: ['user', 'environment'],
+                        height: {
+                            ideal: 1080
+                        },
+                        width: {
+                            ideal: 1920
+                        }
+                    }
+                }).then(stream => {
+                    const track = stream.getVideoTracks()[0];
+    
+                    //Create image capture object and get camera capabilities
+                    const imageCapture = new ImageCapture(track)
+                    const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
+    
+                        //todo: check if camera has a torch
+    
+                        //let there be light!
+                        const btn = document.querySelector('#switch');
+                        btn.addEventListener('click', function () {
+                            lightState = !lightState;
+                            track.applyConstraints({
+                                advanced: [{
+                                    torch: lightState
+                                }]
+                            });
+                        });
+                    });
+                });
+            });
         }
     }
 };

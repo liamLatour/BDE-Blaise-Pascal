@@ -8,18 +8,25 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>QR scanner</title>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
 </head>
 
 <body style="background-color: transparent;">
     <video id="preview" class="w-100 position-fixed" autoplay="autoplay"></video>
 
+    <button type="button" onclick="changeCamera()" class="btn btn-secondary position-fixed btn-circle btn-sm"
+        style="top:5px; left:5px;"><i class="fas fa-sync-alt"></i></button>
+
+    <button type="button" id="switch" class="btn btn-secondary position-fixed btn-circle btn-sm"
+        style="top:50px; left:5px;"><i class="fas fa-lightbulb"></i></button>
+
     <div class="position-fixed bg-white" style="top: 200px; bottom: 0; left: 0; right: 0; overflow: scroll;">
         <div>
             <div class="position-relative bg-secondary text-white mb-3" style="height:38px;">
 
-                <h3 class="mx-2 my-0" onclick="$('#idiModal').modal('show');" style="text-transform: none; line-height: 38px; cursor: pointer;" id="idi">ID_billet: XXXXXX-XXXXXX</h3>
+                <h3 class="mx-2 my-0" onclick="$('#idiModal').modal('show');"
+                    style="text-transform: none; line-height: 38px; cursor: pointer;" id="idi">ID_billet: XXXXXX-XXXXXX
+                </h3>
 
                 <button type="button" onclick="validate()" id="validateButton" class="btn btn-warning position-absolute"
                     style="top:0; right:0; border-radius:0;">À valider</button>
@@ -86,7 +93,7 @@
                 </tbody>
             </table>
 
-            <h5 class="m-2">Paiment <i id="pStatus"></i></h5>
+            <h5 class="m-2">Paiment <i id="pStatus"><i class="fa fa-hand-holding-usd"></i></i></h5>
             <table class="table table-sm mx-auto table-bordered text-capitalize"
                 style="width: 90vw; overflow-wrap: anywhere;">
                 <tbody>
@@ -123,7 +130,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Pwd + id Modal -->
     <div class="modal fade" id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="pwdModalLabel"
         aria-hidden="true">
@@ -162,7 +169,8 @@
                     <input type="text" class="form-control" id="idiInput" placeholder="ID_billet">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="pwdModalId" onclick="getInfos($('#idiInput').val(), ($('#autoValid')[0].checked) ? 1 : 0)"
+                    <button type="button" id="pwdModalId"
+                        onclick="getInfos($('#idiInput').val(), ($('#autoValid')[0].checked) ? 1 : 0)"
                         class="btn btn-success">Valider</button>
                 </div>
             </div>

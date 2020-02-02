@@ -110,15 +110,15 @@ function fillInfos(data) {
 
     // WAITING  CONFIRMED_HELLOASSO  CONFIRMED_CB_MANUAL  CONFIRMED_OTHER_MANUAL
     if (data["paiement_infos"]["status"] == "WAITING") {
-        $("#pStatus").html('<img src="img/hourglass-half-solid.svg" alt="Attente" height="20px" width="20px"/><i class="fa fa-times-circle" style="color:#FF0000;"></i>');
+        $("#pStatus").html('<i class="fa fa-hourglass-half"></i><i class="fa fa-times-circle" style="color:#FF0000;"></i>');
     } else if (data["paiement_infos"]["status"] == "CONFIRMED_HELLOASSO") {
-        $("#pStatus").html('<img src="img/robot-solid.svg" alt="HelloAsso" height="20px" width="20px"/><i class="fa fa-check-circle" style="color:#008000;"></i>');
+        $("#pStatus").html('<i class="fa fa-robot"></i><i class="fa fa-check-circle" style="color:#008000;"></i>');
     } else if (data["paiement_infos"]["status"] == "CONFIRMED_CB_MANUAL") {
-        $("#pStatus").html('<img src="img/credit-card-solid.svg" alt="CB" height="20px" width="20px"/><i class="fa fa-check-circle" style="color:#008000;"></i>');
+        $("#pStatus").html('<i class="fa fa-credit-card"></i><i class="fa fa-check-circle" style="color:#008000;"></i>');
     } else if (data["paiement_infos"]["status"] == "CONFIRMED_OTHER_MANUAL") {
-        $("#pStatus").html('<img src="img/hand-holding-usd-solid.svg" alt="Manuel" height="20px" width="20px"/><i class="fa fa-check-circle" style="color:#008000;"></i>');
+        $("#pStatus").html('<i class="fa fa-hand-holding-usd"></i><i class="fa fa-check-circle" style="color:#008000;"></i>');
     } else {
-        $("#pStatus").html('<img src="img/hourglass-half-solid.svg" alt="Attente" height="20px" width="20px"/><i class="fa fa-times-circle" style="color:#FF0000;"></i>');
+        $("#pStatus").html('<i class="fa fa-hourglass-half"></i><i class="fa fa-times-circle" style="color:#FF0000;"></i>');
     }
 
     $("#validateButton").removeClass("btn-success");
