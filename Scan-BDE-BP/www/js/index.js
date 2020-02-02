@@ -59,14 +59,7 @@ function getAuthKey() {
 
 function validate() {
     let idi = $("#validateButton").data("idi");
-    if ($("#validateButton").data("status") == "just") {
-        send('https://events.bde-bp.fr/getreg.php', {
-            'auth_key': authkey,
-            'unvalid': idi
-        }, function (msg) {
-            getInfos(idi);
-        });
-    } else if ($("#validateButton").data("status") == "already") {
+    if ($("#validateButton").data("status") == "just" || $("#validateButton").data("status") == "already") {
         send('https://events.bde-bp.fr/getreg.php', {
             'auth_key': authkey,
             'unvalid': idi

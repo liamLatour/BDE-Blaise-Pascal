@@ -83,21 +83,20 @@ function fillInfos(data) {
     $("#idi").html("IDI: " + data["idi"]);
 
     $("#name").html(data["payer_infos"]["nom"]);
-    $("#email").html(data["payer_infos"]["email"]);
     $("#surname").html(data["payer_infos"]["prenom"]);
-    $("#auth").html(data["payer_infos"]["auth"]);
     $("#classe").html(data["payer_infos"]["classe"]);
+    $("#email").html(data["payer_infos"]["email"]);
+    $("#auth").html((data["payer_infos"]["auth"]) ? '<i class="fa fa-check-circle" style="color:#008000;"></i>' : '<i class="fa fa-times-circle" style="color:#C82333;"></i>');
     $("#ida").html(data["payer_infos"]["ida"]);
+    $("#otherInfosPayer").html("");
+
+    for (let [key, value] of Object.entries(data["payer_infos"]["custom_infos"])) {
+        $("#otherInfosPayer").append("<tr><th>" + key + "</th><td>" + value + "</td></tr>");
+    }
+    
 
     $("#type").html(data["order_infos"]["tarif"]);
-    $("#options").html("");
     $("#otherInfos").html("");
-
-    if (data["order_infos"].hasOwnProperty("options")) {
-        for (let [key, value] of Object.entries(data["order_infos"]["options"])) {
-            $("#options").append("<tr><td>" + value + "</td></tr>");
-        }
-    }
 
     for (let [key, value] of Object.entries(data["order_infos"]["custom_infos"])) {
         $("#otherInfos").append("<tr><th>" + key + "</th><td>" + value + "</td></tr>");
@@ -110,7 +109,7 @@ function fillInfos(data) {
 
     // WAITING  CONFIRMED_HELLOASSO  CONFIRMED_CB_MANUAL  CONFIRMED_OTHER_MANUAL
     if (data["paiement_infos"]["status"] == "WAITING") {
-        $("#pStatus").html('<i class="fa fa-hourglass-half"></i><i class="fa fa-times-circle" style="color:#FF0000;"></i>');
+        $("#pStatus").html('<i class="fa fa-hourglass-half"></i><i class="fa fa-times-circle" style="color:#C82333;"></i>');
     } else if (data["paiement_infos"]["status"] == "CONFIRMED_HELLOASSO") {
         $("#pStatus").html('<i class="fa fa-robot"></i><i class="fa fa-check-circle" style="color:#008000;"></i>');
     } else if (data["paiement_infos"]["status"] == "CONFIRMED_CB_MANUAL") {
@@ -118,7 +117,7 @@ function fillInfos(data) {
     } else if (data["paiement_infos"]["status"] == "CONFIRMED_OTHER_MANUAL") {
         $("#pStatus").html('<i class="fa fa-hand-holding-usd"></i><i class="fa fa-check-circle" style="color:#008000;"></i>');
     } else {
-        $("#pStatus").html('<i class="fa fa-hourglass-half"></i><i class="fa fa-times-circle" style="color:#FF0000;"></i>');
+        $("#pStatus").html('<i class="fa fa-hourglass-half"></i><i class="fa fa-times-circle" style="color:#C82333;"></i>');
     }
 
     $("#validateButton").removeClass("btn-success");
