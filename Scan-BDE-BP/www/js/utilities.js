@@ -1,5 +1,80 @@
-$('.button-checkbox').each(function () {
+var scanner = null;
+var cameras = [];
+var currentCam = null;
 
+function changeCamera() {
+    currentCam = (currentCam + 1) % cameras.length;
+    navigator.mediaDevices.getUserMedia({
+        video: {
+            deviceId: cameras[currentCam].id
+        }
+    })
+    scanner.start(cameras[currentCam]);
+}
+
+function initiateCamera() {
+    scanner = new Instascan.Scanner({
+        video: document.getElementById('preview'),
+        mirror: false
+    });
+    scanner.addListener('scan', function (text) {
+        if (lastScan === false || Date.now() - lastScan > 3000) { // 3 sec
+            picture();
+            getInfos(text, ($("#autoValid")[0].checked) ? 1 : 0);
+            lastScan = Date.now();
+        }
+    });
+
+    navigator.mediaDevices.enumerateDevices().then(devices => {
+        cams = devices.filter((device) => device.kind === 'videoinput');
+
+        cams.forEach(element => {
+            cameras.push(cam = new Instascan.Camera(element.deviceId));
+        });
+
+        if (cameras.length != 0) {
+            // For the light
+            navigator.mediaDevices.getUserMedia({
+                video: {
+                    deviceId: cams[cams.length - 1].deviceId,
+                    facingMode: ['user', 'environment'],
+                    height: {
+                        ideal: 1080
+                    },
+                    width: {
+                        ideal: 1920
+                    }
+                }
+            }).then(stream => {
+                const track = stream.getVideoTracks()[0];
+
+                //Create image capture object and get camera capabilities
+                const imageCapture = new ImageCapture(track)
+                const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
+
+                    //let there be light!
+                    const btn = document.querySelector('#switch');
+                    btn.addEventListener('click', function () {
+                        lightState = !lightState;
+                        track.applyConstraints({
+                            advanced: [{
+                                torch: lightState
+                            }]
+                        });
+                    });
+                });
+            });
+
+            // For the QR code
+            currentCam = cameras.length - 1;
+            scanner.start(cameras[currentCam]);
+        } else {
+            console.error('No cameras found.');
+        }
+    });
+}
+
+$('.button-checkbox').each(function () {
     // Settings
     var $widget = $(this),
         $button = $widget.find('button'),
@@ -80,7 +155,7 @@ function fillInfos(data) {
         return;
     }
 
-    $("#idi").html("IDI: " + data["idi"]);
+    $("#idi").html("ID_billet: " + data["idi"]);
 
     $("#name").html(data["payer_infos"]["nom"]);
     $("#surname").html(data["payer_infos"]["prenom"]);
@@ -93,7 +168,7 @@ function fillInfos(data) {
     for (let [key, value] of Object.entries(data["payer_infos"]["custom_infos"])) {
         $("#otherInfosPayer").append("<tr><th>" + key + "</th><td>" + value + "</td></tr>");
     }
-    
+
 
     $("#type").html(data["order_infos"]["tarif"]);
     $("#otherInfos").html("");
@@ -147,10 +222,10 @@ function fillInfos(data) {
 function picture() {
     if (!navigator.vibrate(50)) {
         $("body").css("backgroundColor", "#ffffff")
-        .animate({
-            backgroundColor: "transparent"
-        }, 100, null, function () {
-            $("body").css("backgroundColor", "transparent");
-        });
+            .animate({
+                backgroundColor: "transparent"
+            }, 100, null, function () {
+                $("body").css("backgroundColor", "transparent");
+            });
     }
 }

@@ -11,6 +11,7 @@
   "license": "none",
   "dependencies": {
     "cordova-android": "^8.1.0",
+    "cordova-plugin-android-permissions": "^1.0.2",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-qrscanner": "^3.0.1",
     "cordova-plugin-vibration": "^3.1.1"
@@ -22,7 +23,8 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-vibration": {},
-      "cordova-plugin-qrscanner": {}
+      "cordova-plugin-qrscanner": {},
+      "cordova-plugin-android-permissions": {}
     },
     "platforms": [
       "android"
