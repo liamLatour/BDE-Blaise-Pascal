@@ -8,24 +8,28 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <!--Pour les icons-->
+    <link rel="stylesheet" type="text/css"  href="fontawesome/css/all.min.css">
 </head>
 
 <body style="background-color: transparent;">
+    <!--C'est ici que le flux vidéo s'affiche-->
     <video id="preview" class="w-100 position-fixed" autoplay="autoplay"></video>
 
+    <!--Boutton pour tourner la caméra et activer la lampe torch-->
     <button type="button" onclick="changeCamera()" class="btn btn-secondary position-fixed btn-circle btn-sm"
         style="top:5px; left:5px;"><i class="fas fa-sync-alt"></i></button>
 
     <button type="button" id="switch" class="btn btn-secondary position-fixed btn-circle btn-sm"
         style="top:50px; left:5px;"><i class="fas fa-lightbulb"></i></button>
 
+    <!--C'est ici que sont les informations du billet-->
     <div class="position-fixed bg-white" style="top: 200px; bottom: 0; left: 0; right: 0; overflow: scroll;">
         <div>
             <div class="position-relative bg-secondary text-white mb-3" style="height:38px;">
 
                 <h3 class="mx-2 my-0" onclick="$('#idiModal').modal('show');"
-                    style="text-transform: none; line-height: 38px; cursor: pointer;" id="idi">ID_billet: XXXXXX-XXXXXX
+                    style="text-transform: none; line-height: 38px; cursor: pointer;" id="idi">ID_billet
                 </h3>
 
                 <button type="button" onclick="validate()" id="validateButton" class="btn btn-warning position-absolute"
@@ -94,7 +98,7 @@
                 </tbody>
             </table>
 
-            <h5 class="m-2">Paiment <i id="pStatus"></i></h5>
+            <h5 class="m-2">Paiment <i id="pStatus"><i class="fa fa-hourglass-half"></i><i class="fa fa-times-circle" style="color:#C82333;"></i></i></h5>
             <table class="table table-sm mx-auto table-bordered text-capitalize"
                 style="width: 90vw; overflow-wrap: anywhere;">
                 <tbody>
@@ -117,6 +121,7 @@
                 </tbody>
             </table>
 
+            <!--Boutton de connexion/déconnexion et Auto-valid-->
             <div class="text-center" style="font-size: 0;">
                 <button type="button" onclick="deco()" class="btn btn-danger" id="deco"
                     style="border-top-right-radius: 0; border-bottom-right-radius: 0; right:50%; bottom:0;">Déconnexion</button>
@@ -178,15 +183,13 @@
         </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-    </script>
-    <script src="js/bootstrap.min.js"></script>
+    <!--Fichier javascript-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/instascan.js"></script>
     <script type="text/javascript" src="js/utilities.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
-
 </html>

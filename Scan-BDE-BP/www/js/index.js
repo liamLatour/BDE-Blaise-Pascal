@@ -1,20 +1,23 @@
-var lastScan = false;
 var authkey = 'none';
-var lightState = false;
-// https://github.com/bitpay/cordova-plugin-qrscanner
 
 function getInfos(ID_billet, valid = 0) {
-    console.log(ID_billet);
-    console.log(authkey);
+    // console.log(ID_billet);
+    // console.log(authkey);
 
     $('#idiModal').modal('hide');
+
     if (authkey != "none") {
-        send("https://events.bde-bp.fr/getreg.php", {
-            'ID_billet': ID_billet,
-            'auth_key': authkey,
-            'valid_on_check': valid
-        }, fillInfos);
+        checkAuthKeyIsValid(function () {
+            sendPOST("https://events.bde-bp.fr/getreg.php", {
+                'ID_billet': ID_billet,
+                'auth_key': authkey,
+                'valid_on_check': valid
+            }, fillInfos)
+        }, function () {
+            $('#pwdModal').modal('show')
+        });
     } else {
+        // Si il n'y à pas d'authkey ou quelle n'est plus valid
         $('#pwdModal').modal('show');
     }
 }
@@ -26,11 +29,11 @@ function deco() {
     authkey = "none";
     $("#deco").addClass("d-none");
     $("#connexion").removeClass("d-none");
-    $('#pwdModal').modal('show');
+    $('#pwdModal').modal('show'); // On redemande tout de suite de se reconnecter
 }
 
 function getAuthKey() {
-    send('https://auth.bde-bp.fr/authkey.php', {
+    sendPOST('https://auth.bde-bp.fr/authkey.php', {
         'id': $("#idInput").val(),
         'password': $("#pwdInput").val()
     }, function (msg) {
@@ -40,7 +43,6 @@ function getAuthKey() {
             if (typeof (Storage) !== "undefined") {
                 localStorage.auth_key = msg["auth_key"];
             }
-
             authkey = msg["auth_key"];
             $("#deco").removeClass("d-none");
             $("#connexion").addClass("d-none");
@@ -52,17 +54,17 @@ function getAuthKey() {
 function validate() {
     let idi = $("#validateButton").data("idi");
     if ($("#validateButton").data("status") == "just" || $("#validateButton").data("status") == "already") {
-        send('https://events.bde-bp.fr/getreg.php', {
+        sendPOST('https://events.bde-bp.fr/getreg.php', {
             'auth_key': authkey,
             'unvalid': idi
-        }, function (msg) {
+        }, function () {
             getInfos(idi);
         });
     } else if ($("#validateButton").data("status") == "not") {
-        send('https://events.bde-bp.fr/getreg.php', {
+        sendPOST('https://events.bde-bp.fr/getreg.php', {
             'auth_key': authkey,
             'valid': idi
-        }, function (msg) {
+        }, function () {
             getInfos(idi);
         });
     } else {
@@ -76,23 +78,20 @@ var app = {
     },
 
     onDeviceReady: function () {
-        this.receivedEvent('deviceready');
-    },
-
-    receivedEvent: function (id) {
+        // On remonte le flux vidéo pour centrer la camera
         $("#preview").css({
             "top": "-" + (window.innerHeight / 2 - 100) + "px"
         });
 
+        // On demande les permissions pour la camera si on les à pas
         var permissions = cordova.plugins.permissions;
         permissions.hasPermission(permissions.CAMERA, function (status) {
             if (status.hasPermission) {
                 initiateCamera();
-            }
-            else {
+            } else {
                 permissions.requestPermission(permissions.CAMERA, success, error);
 
-                function error() {     
+                function error() {
                     alert('Please accept the Android permissions.');
                     console.log(codes.error);
                 }
@@ -105,29 +104,15 @@ var app = {
             }
         });
 
+        // On vérifie si une authkey à été enregistré
         if (typeof (Storage) !== "undefined") {
-
             $("#deco").addClass("d-none");
             $("#connexion").removeClass("d-none");
-
-            if (localStorage.auth_key && localStorage.auth_key != "none") {
-                send('https://auth.bde-bp.fr/authkey.php', {
-                    'key': localStorage.auth_key
-                }, function (data) {
-                    if (!data['verif_key']) {
-                        localStorage.auth_key = "none";
-                        authkey = "none";
-                        $('#pwdModal').modal('show');
-                    } else {
-                        authkey = localStorage.auth_key;
-                        $("#deco").removeClass("d-none");
-                        $("#connexion").addClass("d-none");
-                    }
-                });
-            } else {
+            checkAuthKeyIsValid(null, function(){
                 $('#pwdModal').modal('show');
-            }
+            });
         } else {
+            // Il n'y a pas d'authKey enregistré
             $('#pwdModal').modal('show');
         }
     }
